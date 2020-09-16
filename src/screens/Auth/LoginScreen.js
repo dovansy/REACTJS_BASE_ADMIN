@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/Login.css'
+import { ROUTER } from '@constants/Constant'
 import { Link, Redirect } from 'react-router-dom'
 import { requestLogin } from '@constants/Api'
 import Cookie from 'js-cookie'
@@ -106,7 +107,7 @@ class LoginScreen extends React.Component {
                       Quên mật khẩu?
                     </a>
                   </div>
-                  <Link>
+                  <Link to={ROUTER.HOME}>
                     <button type="submit" className="btn btn-danger" onClick={this.login}>
                       <div className="login-button-content">
                         <span>Đăng nhập</span>
